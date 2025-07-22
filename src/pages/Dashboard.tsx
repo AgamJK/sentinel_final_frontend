@@ -25,7 +25,7 @@ const Dashboard = () => {
     const fetchDashboardData = async () => {
       try {
         // Fetch emotion overview
-        const emotionResponse = await fetch('http://localhost:5000/api/emotion-overview');
+        const emotionResponse = await fetch('https://sentinel-final.onrender.com/api/emotion-overview');
         if (emotionResponse.ok) {
           const emotionJson = await emotionResponse.json();
           
@@ -59,7 +59,7 @@ const Dashboard = () => {
         }
 
         // Fetch recent negative sentiment messages for tickets
-        const ticketsResponse = await fetch('http://localhost:5000/alerts?limit=3');
+        const ticketsResponse = await fetch('https://sentinel-final.onrender.com/alerts?limit=3');
         if (ticketsResponse.ok) {
           const ticketsJson = await ticketsResponse.json();
           if (ticketsJson.messages && Array.isArray(ticketsJson.messages)) {
@@ -75,7 +75,7 @@ const Dashboard = () => {
         }
 
         // Fetch email configuration
-        const configResponse = await fetch('http://localhost:5000/api/email-config');
+        const configResponse = await fetch('https://sentinel-final.onrender.com/api/email-config');
         if (configResponse.ok) {
           const configJson = await configResponse.json();
           setEmailConfig(configJson);

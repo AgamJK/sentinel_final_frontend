@@ -75,7 +75,7 @@ const EmailMonitoringSetup = ({ onConfigSaved, existingConfig }: EmailMonitoring
       console.log("Sending request to backend...");
       
       // Save configuration to backend (backend will handle data reset automatically)
-      const response = await fetch('http://localhost:5000/api/email-config', {
+      const response = await fetch('https://sentinel-final.onrender.com/api/email-config', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

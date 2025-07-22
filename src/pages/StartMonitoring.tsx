@@ -29,7 +29,7 @@ const StartMonitoring = () => {
   useEffect(() => {
     const checkEmailConfig = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/email-config');
+        const response = await fetch('https://sentinel-final.onrender.com/api/email-config');
         if (response.ok) {
           const config = await response.json();
           setExistingEmailConfig(config);
@@ -80,7 +80,7 @@ const StartMonitoring = () => {
     try {
       // If Gmail is selected and configured, start monitoring
       if (selectedPlatforms.includes("gmail") && emailConfigured) {
-        const response = await fetch('http://localhost:5000/api/start-monitoring', {
+        const response = await fetch('https://sentinel-final.onrender.com/api/start-monitoring', {
           method: 'POST',
         });
         

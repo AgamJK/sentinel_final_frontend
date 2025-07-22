@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 
-const BACKEND_URL = 'http://localhost:5000'; // Change if your backend runs elsewhere
+const BACKEND_URL = 'https://sentinel-final.onrender.com'; // Change if your backend runs elsewhere
 
 const SentimentAnalyzer: React.FC = () => {
   const [text, setText] = useState('');
